@@ -1,0 +1,33 @@
+# EyeSite - Python Dependencies
+# Target Python version: Python 3.10 or 3.11 (Windows / macOS / Linux)
+#
+# Installation Instructions:
+# 1. (Recommended for CPU-only systems to save disk space & avoid large CUDA downloads):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# 2. Install dependencies:
+#    pip install -r requirements.txt
+# 3. Audio input (PyAudio) note for Windows:
+#    If 'pip install pyaudio' fails due to missing C++ build tools, install via pipwin:
+#    pip install pipwin
+#    pipwin install pyaudio
+
+numpy==1.26.4
+opencv-python==4.10.0.84
+Pillow==10.4.0
+PyYAML==6.0.2
+
+# AI / Vision / OCR
+ultralytics==8.2.70
+easyocr==1.7.1
+
+# Voice interaction
+pyttsx3==2.90
+SpeechRecognition==3.10.4
+# PyAudio==0.2.14  # Uncomment to install; see note above if Windows build fails
+
+# Testing and Code Quality
+pytest==8.3.2
+pytest-mock==3.14.0
+pytest-cov==5.0.0
+ruff==0.6.2
+black==24.8.0

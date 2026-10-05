@@ -1,0 +1,50 @@
+app:
+  first_run_disclaimer: true
+  log_level: INFO
+camera:
+  source: 0            # int index or path to video file
+  width: 640
+  height: 480
+  fps: 30
+  mirror: false
+detection:
+  model_path: assets/yolov8n.pt
+  confidence: 0.45
+  iou: 0.5
+  imgsz: 640
+  max_rate_hz: 5
+  device: auto
+  smoothing_window: 3
+  smoothing_min_hits: 2
+  stale_after_s: 1.5
+navigation:
+  left_max: 0.33
+  right_min: 0.67
+  near_area_ratio: 0.12
+  very_close_area_ratio: 0.35
+  cooldown_s: 6.0
+  global_min_interval_s: 2.5
+  max_items_spoken: 4
+  relevant_classes: [person, bicycle, car, motorcycle, bus, truck, chair, couch,
+                     bed, dining table, potted plant, bench, tv, laptop, dog, cat,
+                     suitcase, backpack, toilet, refrigerator, door]   # only labels YOLO supports
+ocr:
+  languages: [en]
+  preload: true
+  min_confidence: 0.40
+  max_spoken_chars: 400
+  gpu: false
+voice_output:
+  rate: 170
+  volume: 0.9
+  info_max_age_s: 3.0
+voice_input:
+  mode: push_to_talk       # or continuous
+  timeout_s: 5
+  phrase_time_limit_s: 6
+  engine: google           # google | vosk
+  ambient_calibration_s: 1
+ui:
+  theme: high_contrast
+  font_size: 16
+  show_confidence: true
